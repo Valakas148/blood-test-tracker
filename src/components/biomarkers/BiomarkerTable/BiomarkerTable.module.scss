@@ -1,0 +1,86 @@
+@use "@/styles/variables.scss" as *;
+
+.wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  max-width: 100%;
+}
+
+.table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border-bottom: 1px solid $color-border;
+    padding: $space-3 $space-2;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  th {
+    color: $color-text-secondary;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  td {
+    min-width: 120px;
+  }
+
+  input {
+    width: 100%;
+    min-width: 100px;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    padding: $space-2;
+    color: $color-text-primary;
+  }
+}
+
+.nameCell {
+  min-width: 220px;
+}
+
+.statusCell {
+  min-width: 150px;
+}
+
+.actionsCell {
+  min-width: 136px;
+  white-space: nowrap;
+}
+
+.abnormalRow {
+  background: rgba(220, 38, 38, 0.03);
+}
+
+.statusBadge {
+  display: inline-block;
+  border-radius: $radius-full;
+  padding: 0.3rem 0.6rem;
+  color: $color-text-inverse;
+  text-transform: capitalize;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+}
+
+.normal {
+  background: $color-success;
+}
+
+.low {
+  background: $color-warning;
+}
+
+.high {
+  background: $color-danger;
+}
+

@@ -1,0 +1,40 @@
+@use "@/styles/variables.scss" as *;
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+  gap: $space-3;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background: $color-surface;
+  padding: $space-2;
+  box-shadow: $shadow-sm;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 40px;
+  max-height: 180px;
+  border: 0;
+  border-radius: $radius-md;
+  background: transparent;
+  color: $color-text-primary;
+  font-size: $font-size-sm;
+  line-height: $line-height-base;
+  padding: $space-2 $space-3;
+  resize: none;
+  overflow-y: hidden;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.sendButton {
+  width: 42px;
+  height: 42px;
+  min-height: 40px;
+  padding: 0;
+  border-radius: $radius-md;
+}

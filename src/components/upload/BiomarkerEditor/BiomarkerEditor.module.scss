@@ -1,0 +1,130 @@
+@use "@/styles/variables.scss" as *;
+
+.container {
+  background: $color-card;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  h2 {
+    color: $color-text-primary;
+    font-size: 1.25rem;
+  }
+}
+
+.scrollHint {
+  display: block;
+  margin-top: $space-2;
+  color: $color-text-muted;
+  font-size: $font-size-xs;
+}
+
+.formSection {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  color: $color-text-primary;
+  font-size: 0.95rem;
+
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    padding: 0.55rem 0.65rem;
+    color: $color-text-primary;
+    font: inherit;
+  }
+
+  .requiredMark {
+    color: $color-danger;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.dateTrigger {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface;
+  color: $color-text-primary;
+  min-height: 40px;
+  padding: $space-2 $space-3;
+  font-size: $font-size-sm;
+}
+
+.dateTriggerLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+}
+
+.datePopover {
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface;
+  box-shadow: $shadow-md;
+  padding: $space-3;
+  z-index: 20;
+  width: fit-content;
+}
+
+.dayPicker {
+  :global(.rdp-day_selected),
+  :global(.rdp-day_range_start),
+  :global(.rdp-day_range_end) {
+    background: $color-primary;
+    color: $color-text-inverse;
+  }
+
+  :global(.rdp-button:hover):not([disabled]):not(.rdp-day_selected) {
+    background: #f1f5f9;
+  }
+}
+
+.errorText {
+  color: $color-danger;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

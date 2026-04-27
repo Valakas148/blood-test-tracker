@@ -1,0 +1,63 @@
+@use "@/styles/variables.scss" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  z-index: 1500;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1501;
+  padding: $space-4;
+  width: min(460px, 100%);
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  padding: $space-5;
+  display: grid;
+  gap: $space-3;
+}
+
+.closeButton {
+  position: absolute;
+  top: $space-2;
+  right: $space-2;
+  border: 0;
+  background: transparent;
+  color: $color-text-muted;
+  border-radius: $radius-sm;
+  min-width: 28px;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background: #f1f5f9;
+    color: $color-text-primary;
+  }
+}
+
+.title {
+  color: $color-text-primary;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+.description {
+  color: $color-text-secondary;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: $space-2;
+  flex-wrap: wrap;
+}

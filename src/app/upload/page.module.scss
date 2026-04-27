@@ -1,0 +1,100 @@
+@use "@/styles/variables.scss" as *;
+
+.page {
+  min-height: calc(100vh - 2.5rem);
+  background: $color-background;
+  width: min(980px, 100%);
+  padding: clamp(1rem, 2.5vw, 2rem);
+  margin: 0 auto;
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.header {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid $color-border;
+  border-radius: 18px;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+
+  h1 {
+    color: $color-text-primary;
+    font-size: clamp(1.5rem, 2.3vw, 2.05rem);
+    margin-bottom: 0.45rem;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    color: $color-text-secondary;
+    max-width: 62ch;
+  }
+}
+
+.successCard,
+.errorCard {
+  background: $color-card;
+  border-radius: 16px;
+  border: 1px solid $color-border;
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.successCard {
+  h2 {
+    color: $color-success;
+  }
+
+  p {
+    color: $color-text-secondary;
+    margin: 0.5rem 0 1rem;
+  }
+}
+
+.historyLink {
+  display: inline-block;
+  color: #fff;
+  background: $color-primary;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
+  }
+}
+
+.errorCard {
+  margin-top: 1rem;
+  color: $color-danger;
+}
+
+@media (max-width: 900px) {
+  .page {
+    width: 100%;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .header {
+    border-radius: 14px;
+  }
+
+  .successCard,
+  .errorCard {
+    border-radius: 14px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 0.75rem;
+  }
+
+  .header {
+    padding: 0.95rem;
+  }
+}

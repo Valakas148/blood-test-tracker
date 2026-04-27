@@ -1,0 +1,33 @@
+@use "@/styles/variables.scss" as *;
+
+.section {
+  display: grid;
+  gap: $space-4;
+}
+
+.loading {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  color: currentColor;
+}
+
+.selectorCard {
+  display: grid;
+  gap: $space-2;
+}
+
+.charts {
+  display: grid;
+  gap: $space-4;
+}
+
+.chartCard {
+  display: grid;
+  gap: $space-2;
+}

@@ -1,0 +1,44 @@
+@use "@/styles/variables.scss" as *;
+
+.emptyState {
+  border: 1px dashed $color-border-strong;
+  border-radius: $radius-lg;
+  padding: $space-8;
+  background: $color-surface;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: $space-2;
+}
+
+.icon {
+  color: $color-text-muted;
+  width: 44px;
+  height: 44px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  color: $color-text-primary;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+.description {
+  color: $color-text-secondary;
+  max-width: 52ch;
+}
+
+.action {
+  margin-top: $space-2;
+}
+
+@media (max-width: 767px) {
+  .emptyState {
+    padding: $space-5;
+  }
+}

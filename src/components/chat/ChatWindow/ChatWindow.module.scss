@@ -1,0 +1,98 @@
+@use "@/styles/variables.scss" as *;
+
+.window {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.messages {
+  overflow-y: auto;
+  padding: $space-6;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+.bottom {
+  padding: $space-3 $space-6 $space-5;
+  background: linear-gradient(to top, rgba(248, 250, 252, 1), rgba(248, 250, 252, 0.95));
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-bottom: $space-1;
+}
+
+.suggestion {
+  padding: $space-2 $space-4;
+  border: 1px solid $color-border;
+  border-radius: $radius-full;
+  background: $color-surface;
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  cursor: pointer;
+  transition: all $transition-fast;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+    background: $color-primary-light;
+  }
+}
+
+.typingBubble {
+  display: flex;
+  gap: 4px;
+  padding: $space-3 $space-4;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg $radius-lg $radius-lg $radius-sm;
+  width: fit-content;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $color-text-muted;
+  animation: bounce 1.2s infinite;
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-6px);
+  }
+}
+
+.error {
+  padding: $space-3 $space-4;
+  background: $color-danger-light;
+  color: $color-danger;
+  border-radius: $radius-md;
+  font-size: $font-size-sm;
+}
+
+.hydrationState {
+  padding: $space-2 0;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}

@@ -1,0 +1,85 @@
+@use "@/styles/variables.scss" as *;
+
+.wrapper {
+  display: grid;
+  gap: $space-4;
+  min-width: 0;
+}
+
+.intro {
+  background: linear-gradient(135deg, $color-primary-light 0%, $color-surface 100%);
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $space-5;
+
+  h2 {
+    color: $color-text-primary;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $space-2;
+  }
+
+  p {
+    color: $color-text-secondary;
+    max-width: 72ch;
+  }
+}
+
+.successCard,
+.errorCard {
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  background: $color-surface;
+  box-shadow: $shadow-sm;
+  padding: $space-5;
+}
+
+.successCard {
+  border-color: rgba(22, 163, 74, 0.2);
+  background: $color-success-light;
+
+  p {
+    color: $color-text-secondary;
+    margin-bottom: $space-4;
+  }
+}
+
+.primaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-md;
+  background: $color-primary;
+  color: $color-text-inverse;
+  font-weight: $font-weight-semibold;
+  padding: $space-2 $space-4;
+  transition: background $transition-fast;
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+}
+
+.successActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+.errorCard {
+  border-color: rgba(220, 38, 38, 0.25);
+  background: $color-danger-light;
+
+  p {
+    color: $color-danger;
+    font-weight: $font-weight-medium;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro,
+  .successCard,
+  .errorCard {
+    padding: $space-4;
+  }
+}

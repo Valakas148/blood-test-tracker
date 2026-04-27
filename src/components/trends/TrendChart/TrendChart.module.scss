@@ -1,0 +1,49 @@
+@use "@/styles/variables.scss" as *;
+
+.chartWrap {
+  display: grid;
+  gap: $space-3;
+  padding: $space-3;
+}
+
+.meta {
+  padding: 0 $space-1;
+
+  h3 {
+    margin: 0;
+    font-size: $font-size-lg;
+    color: $color-text-primary;
+  }
+
+  p {
+    margin: $space-1 0 0;
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+  }
+}
+
+.tooltip {
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface;
+  box-shadow: $shadow-sm;
+  padding: $space-3;
+}
+
+.tooltipDate {
+  margin: 0;
+  color: $color-text-secondary;
+  font-size: $font-size-xs;
+}
+
+.tooltipValue {
+  margin: $space-1 0 0;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+}
+
+.tooltipStatus {
+  margin: $space-1 0 0;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+}

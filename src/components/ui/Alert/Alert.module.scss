@@ -1,0 +1,42 @@
+@use "@/styles/variables.scss" as *;
+
+.alert {
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  padding: $space-4 $space-5;
+}
+
+.title {
+  margin-bottom: $space-1;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+.content {
+  color: $color-text-secondary;
+}
+
+.success {
+  border-color: rgba(22, 163, 74, 0.2);
+  background: $color-success-light;
+
+  .title {
+    color: $color-success;
+  }
+}
+
+.error {
+  border-color: rgba(220, 38, 38, 0.25);
+  background: $color-danger-light;
+
+  .title,
+  .content {
+    color: $color-danger;
+  }
+}
+
+.info {
+  border-color: $color-border;
+  background: $color-surface;
+}

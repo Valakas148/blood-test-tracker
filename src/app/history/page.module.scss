@@ -1,0 +1,244 @@
+@use "@/styles/variables.scss" as *;
+
+.section {
+  display: grid;
+  gap: $space-4;
+}
+
+.filtersBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+  flex-wrap: wrap;
+}
+
+.filtersLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+.filters {
+  margin-left: auto;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
+
+.filterField {
+  display: grid;
+  gap: $space-1;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+  min-width: 140px;
+
+  input {
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    padding: $space-2;
+    color: $color-text-primary;
+    background: $color-surface;
+    min-height: 36px;
+  }
+}
+
+.fieldLabel {
+  color: $color-text-muted;
+  font-size: $font-size-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.selectTrigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: $space-2;
+  color: $color-text-primary;
+  background: $color-surface;
+  min-height: 38px;
+  text-align: left;
+  min-width: 160px;
+}
+
+.selectContent {
+  min-width: var(--radix-select-trigger-width);
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.triggerText {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+}
+
+.selectItem {
+  position: relative;
+  padding: $space-2 $space-3 $space-2 $space-6;
+  color: $color-text-primary;
+  font-size: $font-size-sm;
+  cursor: pointer;
+
+  &:hover {
+    background: #f1f5f9;
+  }
+
+  &[data-highlighted] {
+    background: #f1f5f9;
+    outline: none;
+  }
+}
+
+.itemIndicator {
+  position: absolute;
+  left: $space-2;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+}
+
+.rangeTrigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: $color-surface;
+  color: $color-text-primary;
+  min-height: 38px;
+  padding: $space-2 $space-3;
+  font-size: $font-size-sm;
+  min-width: 240px;
+}
+
+.chevronIcon {
+  color: $color-text-muted;
+  flex-shrink: 0;
+}
+
+.rangePopover {
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface;
+  box-shadow: $shadow-md;
+  padding: $space-3;
+  z-index: 20;
+  width: fit-content;
+}
+
+.rangePickers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: $space-3;
+}
+
+.pickerGroup {
+  display: grid;
+  gap: $space-2;
+}
+
+.pickerLabel {
+  color: $color-text-secondary;
+  font-size: $font-size-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: $font-weight-medium;
+}
+
+.dayPicker {
+  :global(.rdp-day_selected),
+  :global(.rdp-day_range_start),
+  :global(.rdp-day_range_end) {
+    background: $color-primary;
+    color: $color-text-inverse;
+  }
+
+  :global(.rdp-day_range_middle) {
+    background: $color-primary-light;
+    color: $color-text-primary;
+  }
+
+  :global(.rdp-button:hover):not([disabled]):not(.rdp-day_selected) {
+    background: #f1f5f9;
+  }
+}
+
+.rangeActions {
+  margin-top: $space-2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loading {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: $space-4;
+}
+
+.emptyAction {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 $space-4;
+  border-radius: $radius-md;
+  background: $color-primary;
+  color: $color-text-inverse;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  transition: background $transition-fast;
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+}
+
+.clipboardIcon {
+  width: 44px;
+  height: 44px;
+  color: currentColor;
+}
+
+@media (max-width: 767px) {
+  .filters {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .rangeTrigger {
+    min-width: 100%;
+  }
+
+  .dayPicker {
+    :global(.rdp-months) {
+      flex-direction: column;
+    }
+  }
+
+  .rangePickers {
+    grid-template-columns: 1fr;
+  }
+}

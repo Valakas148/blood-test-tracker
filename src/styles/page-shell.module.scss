@@ -1,0 +1,27 @@
+@use "@/styles/variables.scss" as *;
+
+.page {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-sm;
+  min-height: calc(100vh - #{$space-16});
+  overflow: hidden;
+}
+
+.section {
+  padding: $space-6;
+  color: $color-text-secondary;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .page {
+    border-radius: $radius-lg;
+    min-height: auto;
+  }
+
+  .section {
+    padding: $space-4;
+  }
+}

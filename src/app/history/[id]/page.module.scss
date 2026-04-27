@@ -1,0 +1,108 @@
+@use "@/styles/variables.scss" as *;
+
+.section {
+  display: grid;
+  gap: $space-4;
+  min-width: 0;
+}
+
+.loading {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  gap: $space-2;
+  flex-wrap: wrap;
+}
+
+.summary {
+  display: flex;
+  gap: $space-3;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+}
+
+.table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: $space-3 $space-2;
+    border-bottom: 1px solid $color-border;
+    text-align: left;
+  }
+
+  th {
+    color: $color-text-secondary;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  input {
+    width: 100%;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    padding: $space-2;
+    color: $color-text-primary;
+  }
+}
+
+.abnormalRow {
+  background: rgba(220, 38, 38, 0.03);
+}
+
+.statusCell {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: $radius-full;
+}
+
+.statusDotNormal {
+  background: $color-success;
+}
+
+.statusDotLow {
+  background: $color-warning;
+}
+
+.statusDotHigh {
+  background: $color-danger;
+}
+
+.range {
+  color: $color-text-secondary;
+}
+
+.notes {
+  color: $color-text-secondary;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-3;
+  background: #fbfdff;
+}

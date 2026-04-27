@@ -1,0 +1,49 @@
+@use "@/styles/variables.scss" as *;
+
+.link {
+  display: block;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  min-height: 148px;
+  padding: $space-4;
+  display: grid;
+  gap: $space-2;
+  transition: transform $transition-fast, box-shadow $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+    border-color: $color-border-strong;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-2;
+}
+
+.date {
+  color: $color-text-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+.meta {
+  color: $color-text-secondary;
+}
+
+.abnormal {
+  color: $color-warning;
+  font-weight: $font-weight-medium;
+  min-height: 20px;
+}
+
+.abnormalPlaceholder {
+  color: $color-text-muted;
+  min-height: 20px;
+}

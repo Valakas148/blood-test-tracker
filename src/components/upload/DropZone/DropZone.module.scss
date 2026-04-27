@@ -1,0 +1,85 @@
+@use "@/styles/variables.scss" as *;
+
+.container {
+  background: $color-card;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.title {
+  color: $color-text-primary;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: $color-text-secondary;
+  margin-bottom: 1rem;
+}
+
+.dropZone {
+  border: 2px dashed $color-border;
+  border-radius: 12px;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    border-color: $color-primary;
+    background: rgba(37, 99, 235, 0.05);
+  }
+}
+
+.dragOver {
+  border-color: $color-primary;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.dropText {
+  color: $color-text-primary;
+  font-weight: 600;
+}
+
+.helperText {
+  color: $color-text-secondary;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.error {
+  margin-top: 0.75rem;
+  color: $color-danger;
+  font-weight: 500;
+}
+
+.fileInfo {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: $color-background;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+}
+
+.fileName {
+  color: $color-text-primary;
+  font-weight: 600;
+}
+
+.fileSize {
+  color: $color-text-secondary;
+  font-size: 0.9rem;
+}

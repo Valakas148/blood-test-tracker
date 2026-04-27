@@ -1,0 +1,62 @@
+@use "@/styles/variables.scss" as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-full;
+  border: 1px solid transparent;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  padding: $space-1 $space-2;
+  text-transform: capitalize;
+}
+
+.default {
+  background: #f1f5f9;
+  color: $color-text-secondary;
+  border-color: $color-border;
+}
+
+.pdf {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.image {
+  background: #f5f3ff;
+  color: #6d28d9;
+  border-color: #ddd6fe;
+}
+
+.csv {
+  background: #ecfdf3;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.manual {
+  background: #f8fafc;
+  color: #475569;
+  border-color: #cbd5e1;
+}
+
+.normal {
+  background: $color-success-light;
+  color: $color-success;
+  border-color: rgba(22, 163, 74, 0.25);
+}
+
+.low {
+  background: $color-warning-light;
+  color: $color-warning;
+  border-color: rgba(217, 119, 6, 0.3);
+}
+
+.high {
+  background: $color-danger-light;
+  color: $color-danger;
+  border-color: rgba(220, 38, 38, 0.3);
+}

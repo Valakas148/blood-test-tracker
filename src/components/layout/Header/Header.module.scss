@@ -1,0 +1,46 @@
+@use "@/styles/variables.scss" as *;
+
+.header {
+  height: $header-height;
+  border-bottom: 1px solid $color-border;
+  background: $color-surface;
+  padding: 0 $space-6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-4;
+  flex-shrink: 0;
+}
+
+.left {
+  min-width: 0;
+}
+
+.title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  line-height: $line-height-tight;
+}
+
+.subtitle {
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+  margin-top: $space-1;
+}
+
+.date {
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 0 $space-4;
+  }
+
+  .date {
+    display: none;
+  }
+}
