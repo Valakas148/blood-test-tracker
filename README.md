@@ -17,7 +17,7 @@ A modern, local-first Next.js web application that allows users to upload blood 
 
 This project is deployed on **Vercel**.
 
-* **Production URL:** [blood-test-tracker-beta.vercel.app](https://blood-test-tracker-beta.vercel.app)
+* **Production URL:** [blood-test-tracker-o593.vercel.app](https://blood-test-tracker-o593.vercel.app/)
 
 ---
 
