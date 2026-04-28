@@ -48,6 +48,10 @@ This project is deployed on **Vercel**.
 
 ---
 
+**⚠️ Note on API Rate Limits:** This MVP is currently configured using the **Google Gemini Free Tier**. The `gemini-2.5-flash` model has a strict rate limit of **5 requests per minute**. If you encounter extraction or chat errors during active testing, please wait a minute before retrying. The application implements an automatic retry mechanism with exponential backoff to mitigate this, but sustained rapid usage may still trigger a `503` or `429` error.
+
+---
+
 ## 🧠 Architecture Decisions & Trade-offs
 
 This MVP was built with a strong bias toward **privacy, reliability, and fast iteration**.
