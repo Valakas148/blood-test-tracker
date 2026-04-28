@@ -26,7 +26,7 @@ This project is deployed on **Vercel**.
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd bloodtrack-ai
+   cd blood-test-tracker
    ```
 
 2. **Install dependencies:**
